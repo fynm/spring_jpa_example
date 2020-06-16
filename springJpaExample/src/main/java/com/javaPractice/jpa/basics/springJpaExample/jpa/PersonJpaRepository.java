@@ -41,4 +41,12 @@ public class PersonJpaRepository {
         TypedQuery<Person> namedQuery = entityManager.createNamedQuery("find_all_persons", Person.class);
         return namedQuery.getResultList();
     }
+
+    public int getSum(int[] numbers){
+        int sum = 0;
+        for(int i:numbers){
+            sum = sum + i;
+        }
+        return sum;
+    }
 }
